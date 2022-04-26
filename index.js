@@ -26,10 +26,10 @@ client.on('ready', () => {
 });
 
 var texto = false;
-let voice_Connection;
-var message;
+let voice_Connection = null;
+var message = null;
 var recording = false;
-var usuario;
+var usuario = null;
 var waitingForResponse = false;
 
 client.config.assistant = {

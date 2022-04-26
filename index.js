@@ -148,8 +148,16 @@ client.on('message', async (msg) => {
         }
         return connect(msg);
     }
-    if(partsMsg[0] == "stop")
-
+    if(partsMsg[0] == "stop" || partsMsg[0] == "dc"|| partsMsg[0] == "leave"){
+        voice_Connection.disconnect();
+        texto = false;
+        voice_Connection = null;
+        message = null;
+        recording = false;
+        usuario = null;
+        waitingForResponse = false;
+        return;
+    }
     if(recording)
         return msg.delete()          
     partsMsg.shift()
@@ -162,7 +170,8 @@ client.on('message', async (msg) => {
     recording = true;
     //Define el modo de respuesta según el estado de quien pregunta
     texto = !msg.member.voice.channelID;
-    await connect(msg)
+    if(!texto)
+        await connect(msg)
     client.assistant.start(client.config.assistant.conversation, startConversation);        
 });
 async function connect(msg) {

@@ -44,7 +44,7 @@ client.config.assistant = {
           encodingOut: 'LINEAR16', // supported are LINEAR16 / MP3 / OPUS_IN_OGG (defaults to LINEAR16)
           sampleRateOut: 24000, // supported are 16000 / 24000 (defaults to 24000)
         },
-      lang: 'es-MX', // defaults to en-US, but try other ones, it's fun!
+      lang: client.config.google_lang,
       deviceLocation: {
           coordinates: { // set the latitude and longitude of the device
             latitude: client.config.latitude,

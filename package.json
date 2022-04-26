@@ -5,28 +5,21 @@
   "main": "index.js",
   "dependencies": {
     "@discordjs/opus": "^0.4.0",
-    "@mapbox/node-pre-gyp": "^1.0.1",
-    "discord.js": "^12.5.1",
     "google-assistant": "^0.7.0",
-    "node-witai-speech": "^1.0.2",
-    "request": "^2.88.2",
+    "discord.js": "^12.5.1",
+    "wav": "^1.0.2",
     "underscore": "^1.13.1",
-    "wav": "^1.0.2"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
-  },
-  "engines": {
-    "node": "14.x"
+    "ffmpeg-static": "^4.2.7",
+    "node-witai-speech": "^1.0.2",
+    "request": "^2.88.2"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/healzer/DiscordSpeechBot.git"
+    "url": "git+https://github.com/eliangerard/Discord-Assistant"
   },
   "author": "Elian Gerard",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/healzer/DiscordSpeechBot/issues"
+    "url": "https://github.com/eliangerard/Discord-Assistant/issues"
   }
 }

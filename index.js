@@ -166,12 +166,13 @@ client.on('message', async (msg) => {
     console.log(pregunta);
     client.config.assistant.conversation.textQuery = pregunta;
     message = msg;
-    startRecording = true;
-    recording = true;
     //Define el modo de respuesta según el estado de quien pregunta
     texto = !msg.member.voice.channelID;
-    if(!texto)
-        await connect(msg)
+    if(!texto){
+        startRecording = true;
+        recording = true;
+        await connect(msg);
+    }
     client.assistant.start(client.config.assistant.conversation, startConversation);        
 });
 async function connect(msg) {
